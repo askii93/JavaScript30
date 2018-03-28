@@ -68,6 +68,23 @@
       transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
 
+    .hour-hand {
+      height: 9px;
+      width: 30%;
+      block-size: 1.8%;
+      transform-origin: 133%;
+    }
+
+    .min-hand {
+      height: 7px;
+      block-size: 1.4%;
+    }
+    .second-hand {
+      height: 3px;
+      block-size: 0.7%;
+    }
+
+
   </style>
 
   <script>
@@ -108,9 +125,10 @@
 
 
 //TODO  understand why including this post-transform transition property causes the bug to occur after modifying the transform property?
-/*      secondHand.style.transition='all 0.05s';
-      minuteHand.style.transition='all 0.05s';
-      hourHand.style.transition='all 0.05s';*/
+//     For the purpose of this exercise, assume this portion of the code is just setting properties. Earlier, you are merely setting the property of hand.style.transform. You are not actually sending any execution signal to update the DOM with that, you're just setting the property that you would like the DOM to be set towards. What the DOM will actually see in this exercise is whatever the state of the properties are at the very end of this. I'm not doing anything super fucky with this. But if someone else is reading this and would be able to provide a better explanation of how CSS rendering works wrt what I presume to be the single index.html file.
+/*      secondHand.style.transition='';
+      minuteHand.style.transition='';
+      hourHand.style.transition='';*/
 
       console.log(seconds);
     }
